@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins";
+  font-weight: 500;
+}
+
+:root {
+  --var-purple1: #4a3aab;
+}
+
+body {
+  background-color: rgb(156, 156, 156);
+  width: 100vw;
+  height: 100vh;
+}
+
+#header {
+  width: 100vw;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: header;
+  background-color: #4a3aab;
+}
+
+.container-1 {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-rows: 70px calc(100vh - 70px);
+  grid-template-columns: 45vw 55vw;
+  grid-template-areas: "header header" "aside section";
+}
+
+section{
+    grid-area: section;
+    background-color: aliceblue;
+    position: absolute;
+    z-index: -1;
+}
+
+aside{
+    grid-area: aside;
+    background-color: aliceblue;
+    opacity: 50%;
+    filter: blur(40%);
+}
+
+.leao{
+width:100vw;
+height: calc(100vh - 8px);
+}
+
+.logo {
+  width: 100px;
+}
+
+#menu {
+  display: flex;
+  gap: 30px;
+}
+
+#menu > a {
+  color: white;
+  cursor: pointer;
+}
+
+button {
+  width: 100px;
+  height: 40px;
+  border-radius: 12px;
+  border: none;
+}
+
+button:hover {
+  background-color: var(--var-purple1);
+  transition: all 0.5s;
+  box-shadow: 0 1px 10px black;
+  color: white;
+}
+
+a:hover {
+  color: black;
+}
